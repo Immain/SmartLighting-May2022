@@ -128,3 +128,8 @@ Commands:
   on        Turn the bulb on.
   state     Get the current state from the given bulb.
   ```
+  
+# Run (Lifxlan)
+See the examples folder for example scripts that use lifxlan.
+
+To be as generic as possible, the examples use automatic device discovery to find individual bulbs, which causes a short but noticeable delay. To avoid device discovery, you can either instantiate Light objects directly using their MAC address and IP address (which you can learn by running examples/hello_world.py), or you can use the broadcast methods provided in the LifxLAN API. In the examples folder, broadcast_on.py, broadcast_off.py, and broadcast_color.py will allow you to send commands to all lights quickly from the command line without doing device discovery.
