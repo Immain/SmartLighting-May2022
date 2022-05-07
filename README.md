@@ -1,4 +1,4 @@
-<img src=https://assets.ifttt.com/images/channels/851621020/icons/large.png><img src=https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM>
+<img src=https://assets.ifttt.com/images/channels/851621020/icons/large.png><img src=https://store-images.s-microsoft.com/image/apps.189.13510798885218879.38982b6b-c0f0-4f56-91b5-aec66cd97b22.0c78821c-994d-4490-b3b7-abd78af2a8d7>
 # SmartLighting-May2022
 Python Script for changing Phillips Wiz A19 Lights.
 
