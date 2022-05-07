@@ -131,3 +131,56 @@ Commands:
   
 # Run (Lifxlan)
 To be as generic as possible, the examples use automatic device discovery to find individual bulbs, which causes a short but noticeable delay. To avoid device discovery, you can either instantiate Light objects directly using their MAC address and IP address (which you can learn by running examples/hello_world.py), or you can use the broadcast methods provided in the LifxLAN API. In the examples folder, broadcast_on.py, broadcast_off.py, and broadcast_color.py will allow you to send commands to all lights quickly from the command line without doing device discovery.
+
+# Device API
+```
+# label is a string, 32 char max
+# power can be "on"/"off", True/False, 0/1, or 0/65535
+# rapid is True/False. If True, don't wait for successful confirmation, just send multiple packets and move on
+# NOTE: rapid is meant for super-fast light shows with lots of changes. You should't need it for normal use.
+# arguments in [square brackets] are optional
+
+set_label(label)
+set_power(power, [rapid])
+get_mac_addr()
+get_ip_addr()
+get_service()                       # returns int, 1 = UDP
+get_port()
+get_label()
+get_power()                         # returns 0 for off, 65535 for on
+get_host_firmware_tuple()           # returns (build_timestamp (in nanoseconds), version)
+get_host_firmware_build_timestamp()
+get_host_firmware_version()
+get_wifi_info_tuple()               # returns (wifi_signal_mw, wifi_tx_bytes, wifi_rx_bytes)
+get_wifi_signal_mw()
+get_wifi_tx_bytes()
+get_wifi_rx_bytes()
+get_wifi_firmware_tuple()           # returns (build_timestamp (in nanoseconds), version)
+get_wifi_firmware_build_timestamp()
+get_wifi_firmware_version()
+get_version_tuple()                 # returns (vendor, product, version)
+get_location()                      # Returns location id (bytearray length 16)
+get_location_tuple()                # Returns a tuple of location(bytearray lenght 16), location_label(string), and location_updated_at(unsigned 64 bit epoch timestamp)
+get_location_label()                # Returns location_label string
+get_location_updated_at             # Returns location_updated_at unsigned 64 bit int -> epoch timestamp
+get_group()                         # Returns group id (bytearray length 16)
+get_group_tuple()                   # Returns a tuple of group(bytearray lenght 16), group_label(string), and group_updated_at(unsigned 64 bit epoch timestamp)
+get_group_label()                   # Returns group_label(string)
+get_group_updated_at                # Returns group_updated_at unsigned 64 bit int -> epoch timestamp
+get_vendor()
+get_product()
+get_version()
+get_info_tuple()                    # returns (time (current timestamp in ns), uptime (in ns), downtime (in ns, +/- 5 seconds))
+get_time()
+get_uptime()
+get_downtime()
+is_light()                          # returns True if device is some kind of light product
+supports_color()                    # returns True if product features include color
+supports_temperature()              # returns True if product features include white color temperature
+supports_multizone()                # returns True if product features include multizone functionality
+supports_infrared()                 # returns True if product features include infrared functionality
+```
+
+# To Learn More:
+- Lifxlan: https://github.com/mclarkk/lifxlan
+- PyWizLight: https://github.com/sbidy/pywizlight
