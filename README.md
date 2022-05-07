@@ -1,4 +1,4 @@
-<img src=https://assets.ifttt.com/images/channels/851621020/icons/large.png>
+<img src=https://assets.ifttt.com/images/channels/851621020/icons/large.png><img src=https://upload.wikimedia.org/wikipedia/en/7/7b/LIFX_Logo.png>
 # SmartLighting-May2022
 Python Script for changing Phillips Wiz A19 Lights.
 
