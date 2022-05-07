@@ -8,3 +8,8 @@ To use this script, install Pywizlight using
 ```
 pip3 install pywizlight
 ```
+# Fedora/CentOS
+```
+sudo dnf -y install python3-pywizlight
+```
+
